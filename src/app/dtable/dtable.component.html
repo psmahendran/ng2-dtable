@@ -1,0 +1,29 @@
+<div class="ng2-dtable">
+
+<!--<input #searchVal type="text" (keyup)='0'>-->
+<input type="text" [ngFormControl]="searchTerm">
+    <table>
+        <thead>
+            <tr>
+                <th>hh</th>
+                <th>hh</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>ff</td>
+                <td>$ff</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr *ngFor="let rData of tdata|ng2dtGlobalSearch:globalSearch">
+                
+                <td *ngFor="let cData of rData|ng2dtMapToIterable">{{cData}}</td>
+                
+            </tr>
+           
+        </tbody>
+    </table>
+
+
+</div>
